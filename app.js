@@ -6,8 +6,7 @@ var createError = require('http-errors'),
   env = require('node-env-file'),
   bodyParser = require('body-parser'), // .env file
   app = express(),
-  cors = require('cors'),
-  debug = require('debug')('torre-upgrade-api:api');
+  cors = require('cors');
 
 // Development environment
 if (!process.env.NODE_ENV)
