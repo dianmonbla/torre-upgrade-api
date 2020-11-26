@@ -18,6 +18,8 @@ if (!process.env.NODE_ENV)
  * [rate-limiter-flexible](https://github.com/animir/node-rate-limiter-flexible) counts
  * and limits number of actions by key and protects from DDoS and brute force attacks 
  * at any scale.
+ * 
+ * it works with Redis, process Memory, Cluster or PM2, Memcached, MongoDB, MySQL, PostgreSQL and allows to control requests rate in single process or distributed environment.
  */
 
 // Minimal protection
@@ -46,7 +48,7 @@ app.use(function (request, response, next) {
 app.use(function (error, request, response, next) {
   // Render the error page
   response.status(error.status || 500);
-  response.json(error);
+  response.send('<h1 style="text-align: center;">Ups!</h1><h4 style="text-align: center;">You\'re ready</h4>');
 });
 
 module.exports = app;
