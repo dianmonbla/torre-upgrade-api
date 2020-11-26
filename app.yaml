@@ -1,0 +1,20 @@
+# Quick Start Guide for Node.js in Standard Environment
+# https://cloud.google.com/appengine/docs/standard/nodejs/quickstart
+#
+# Configure your application with app.yaml
+# https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml
+#
+# app.yaml Configuration File
+# https://cloud.google.com/appengine/docs/flexible/nodejs/reference/app-yaml
+runtime: nodejs
+env: flex
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 0.5
+  disk_size_gb: 10
+env_variables:
+  TORRE_SEARCH_RESOURCE_API: "https://search.torre.co"
+  TORRE_RESOURCE_API: "https://torre.co/api"
+  TORRE_BIO_RESOURCE_API: "https://torre.bio/api"
