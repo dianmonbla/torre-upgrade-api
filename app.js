@@ -34,7 +34,11 @@ app.use(bodyParser.json())
 
 app.use(cookieParser());
 
+// Engine views
+app.set('view engine', 'pug')
+
 // Routes
+app.use('/', require('./routes/index'));
 app.use('/bios', require('./routes/bios'));
 app.use('/opportunities', require('./routes/opportunities'));
 app.use('/people', require('./routes/people'));
@@ -48,7 +52,7 @@ app.use(function (request, response, next) {
 app.use(function (error, request, response, next) {
   // Render the error page
   response.status(error.status || 500);
-  response.send('<h1 style="text-align: center;">Ups!</h1><h4 style="text-align: center;">You\'re ready</h4>');
+  response.json(error);
 });
 
 module.exports = app;
