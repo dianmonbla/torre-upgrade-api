@@ -15,6 +15,7 @@ resources:
   memory_gb: 0.5
   disk_size_gb: 10
 env_variables:
+  NODE_ENV: "production"
   TORRE_SEARCH_RESOURCE_API: "https://search.torre.co"
   TORRE_RESOURCE_API: "https://torre.co/api"
   TORRE_BIO_RESOURCE_API: "https://torre.bio/api"

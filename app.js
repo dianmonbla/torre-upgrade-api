@@ -6,9 +6,13 @@ var createError = require('http-errors'),
   env = require('node-env-file'),
   bodyParser = require('body-parser'), // .env file
   app = express(),
-  cors = require('cors');
+  cors = require('cors'),
+  debug = require('debug')('torre-upgrade-api:api');
 
-env(__dirname + '/.env');
+// Development environment
+if (!process.env.NODE_ENV)
+  env(__dirname + '/.env');
+
 app.use(cors())
 
 // Parse application/x-www-form-urlencoded

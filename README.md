@@ -4,7 +4,9 @@ this project was generated with [Node.js](https://nodejs.org/) and [Express.js](
 
 ## Development server
 
-Run *UBUNTU* `DEBUG=torre-upgrade-api:* npm start` for a dev server. Navigate to `http://localhost:3000/`.
+### UBUNTU
+
+Run `DEBUG=torre-upgrade-api:* npm start` for a dev server. Navigate to `http://localhost:3000/`.
 
 ## Production server
 
