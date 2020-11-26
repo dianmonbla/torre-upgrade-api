@@ -4,7 +4,7 @@ var createError = require('http-errors'),
   express = require('express'),
   cookieParser = require('cookie-parser'),
   env = require('node-env-file'),
-  bodyParser = require('body-parser'), // .env file
+  bodyParser = require('body-parser'),
   app = express(),
   cors = require('cors');
 
