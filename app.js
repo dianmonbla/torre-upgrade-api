@@ -6,11 +6,15 @@ var createError = require('http-errors'),
   env = require('node-env-file'),
   bodyParser = require('body-parser'),
   app = express(),
-  cors = require('cors');
+  cors = require('cors'),
+  helmet = require('helmet');
 
 // Development environment
 if (!process.env.NODE_ENV)
   env(__dirname + '/.env');
+
+// Minimal protection
+app.use(helmet());
 
 app.use(cors())
 
