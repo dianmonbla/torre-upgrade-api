@@ -13,6 +13,13 @@ var createError = require('http-errors'),
 if (!process.env.NODE_ENV)
   env(__dirname + '/.env');
 
+/**
+ * IMPORTANT PENDING INTEGRATION
+ * [rate-limiter-flexible](https://github.com/animir/node-rate-limiter-flexible) counts
+ * and limits number of actions by key and protects from DDoS and brute force attacks 
+ * at any scale.
+ */
+
 // Minimal protection
 app.use(helmet());
 
